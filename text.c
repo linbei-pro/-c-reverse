@@ -3,9 +3,15 @@
 
 void reverse(int arr[], int lift, int right)
 {
-	int temp = arr[lift];
-	arr[lift] = arr[right];
-	arr[right] = temp;
+	while(lift<right)
+	{
+	   int temp = arr[lift];
+	   arr[lift] = arr[right];
+	   arr[right] = temp;
+		++lift;
+		--right;
+	}
+			
 }
 
 int main() {
